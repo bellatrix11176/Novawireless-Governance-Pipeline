@@ -1,0 +1,472 @@
+{
+  "meta": {
+    "pipeline_version": "2.1.0",
+    "generated": "2026-03-09 13:48:07",
+    "rows_analyzed": 133517,
+    "months_loaded": 12
+  },
+  "integrity_gate": {
+    "rows_total": 133517,
+    "rows_clean": 133517,
+    "rows_quarantined": 0,
+    "quarantine_rate": 0.0,
+    "proxy_true_divergence_rate": 0.3831
+  },
+  "overall_signals": {
+    "proxy_resolution_rate": 0.8406,
+    "true_resolution_rate": 0.5128,
+    "resolution_inflation_pp": 32.78,
+    "trust_score_mean": 77.23,
+    "trust_score_median": 86.35,
+    "trust_score_p10": 44.87,
+    "trust_score_p90": 98.73,
+    "repeat_contact_30d_rate": 0.161,
+    "escalation_rate": 0.1284,
+    "bandaid_rate": 0.154
+  },
+  "scenario_health": [
+    {
+      "scenario": "loyalty_offer_missed",
+      "calls": 23350,
+      "trust_score": 49.09,
+      "resolution_gap": 0.7913,
+      "bandaid_rate": 0.8803,
+      "status": "VETO"
+    },
+    {
+      "scenario": "gamed_metric",
+      "calls": 28678,
+      "trust_score": 64.08,
+      "resolution_gap": 0.6997,
+      "bandaid_rate": 0.0,
+      "status": "WATCH"
+    },
+    {
+      "scenario": "activation_failed",
+      "calls": 6939,
+      "trust_score": 73.13,
+      "resolution_gap": 0.3696,
+      "bandaid_rate": 0.0,
+      "status": "OK"
+    },
+    {
+      "scenario": "unresolvable_clean",
+      "calls": 15590,
+      "trust_score": 73.29,
+      "resolution_gap": 0.4373,
+      "bandaid_rate": 0.0,
+      "status": "OK"
+    },
+    {
+      "scenario": "line_add_legitimate",
+      "calls": 6561,
+      "trust_score": 95.23,
+      "resolution_gap": -0.0151,
+      "bandaid_rate": 0.0,
+      "status": "OK"
+    },
+    {
+      "scenario": "clean",
+      "calls": 45122,
+      "trust_score": 96.41,
+      "resolution_gap": -0.0865,
+      "bandaid_rate": 0.0,
+      "status": "OK"
+    },
+    {
+      "scenario": "activation_clean",
+      "calls": 7277,
+      "trust_score": 96.58,
+      "resolution_gap": -0.0217,
+      "bandaid_rate": 0.0,
+      "status": "OK"
+    }
+  ],
+  "rep_health": {
+    "total_reps": 250,
+    "lowest_trust_reps": [
+      {
+        "rep_id": "REP00081",
+        "calls": 534,
+        "trust_score": 73.62,
+        "resolution_gap": 0.3989
+      },
+      {
+        "rep_id": "REP00207",
+        "calls": 559,
+        "trust_score": 74.9,
+        "resolution_gap": 0.3792
+      },
+      {
+        "rep_id": "REP00046",
+        "calls": 513,
+        "trust_score": 75.14,
+        "resolution_gap": 0.3801
+      },
+      {
+        "rep_id": "REP00171",
+        "calls": 519,
+        "trust_score": 75.24,
+        "resolution_gap": 0.3372
+      },
+      {
+        "rep_id": "REP00175",
+        "calls": 530,
+        "trust_score": 75.27,
+        "resolution_gap": 0.3642
+      }
+    ],
+    "highest_trust_reps": [
+      {
+        "rep_id": "REP00100",
+        "calls": 524,
+        "trust_score": 79.94,
+        "resolution_gap": 0.2901
+      },
+      {
+        "rep_id": "REP00007",
+        "calls": 564,
+        "trust_score": 79.7,
+        "resolution_gap": 0.2801
+      },
+      {
+        "rep_id": "REP00063",
+        "calls": 538,
+        "trust_score": 79.65,
+        "resolution_gap": 0.2751
+      },
+      {
+        "rep_id": "REP00151",
+        "calls": 558,
+        "trust_score": 79.56,
+        "resolution_gap": 0.2885
+      },
+      {
+        "rep_id": "REP00170",
+        "calls": 554,
+        "trust_score": 79.31,
+        "resolution_gap": 0.2798
+      }
+    ]
+  },
+  "monthly_trends": [
+    {
+      "month": "2025-01",
+      "calls": 11156,
+      "trust_score": 77.21,
+      "resolution_gap": 0.3323,
+      "bandaid_rate": 0.1508,
+      "trust_velocity": null
+    },
+    {
+      "month": "2025-02",
+      "calls": 11163,
+      "trust_score": 77.48,
+      "resolution_gap": 0.3203,
+      "bandaid_rate": 0.1535,
+      "trust_velocity": 0.271
+    },
+    {
+      "month": "2025-03",
+      "calls": 11147,
+      "trust_score": 77.22,
+      "resolution_gap": 0.3295,
+      "bandaid_rate": 0.1531,
+      "trust_velocity": -0.267
+    },
+    {
+      "month": "2025-04",
+      "calls": 11127,
+      "trust_score": 77.1,
+      "resolution_gap": 0.327,
+      "bandaid_rate": 0.1566,
+      "trust_velocity": -0.119
+    },
+    {
+      "month": "2025-05",
+      "calls": 11165,
+      "trust_score": 77.14,
+      "resolution_gap": 0.3283,
+      "bandaid_rate": 0.1546,
+      "trust_velocity": 0.043
+    },
+    {
+      "month": "2025-06",
+      "calls": 11164,
+      "trust_score": 77.27,
+      "resolution_gap": 0.3272,
+      "bandaid_rate": 0.1559,
+      "trust_velocity": 0.131
+    },
+    {
+      "month": "2025-07",
+      "calls": 11051,
+      "trust_score": 77.43,
+      "resolution_gap": 0.3251,
+      "bandaid_rate": 0.1489,
+      "trust_velocity": 0.159
+    },
+    {
+      "month": "2025-08",
+      "calls": 11084,
+      "trust_score": 77.25,
+      "resolution_gap": 0.3283,
+      "bandaid_rate": 0.1573,
+      "trust_velocity": -0.18
+    },
+    {
+      "month": "2025-09",
+      "calls": 11089,
+      "trust_score": 77.32,
+      "resolution_gap": 0.3286,
+      "bandaid_rate": 0.1481,
+      "trust_velocity": 0.069
+    },
+    {
+      "month": "2025-10",
+      "calls": 11130,
+      "trust_score": 77.27,
+      "resolution_gap": 0.3253,
+      "bandaid_rate": 0.1572,
+      "trust_velocity": -0.051
+    },
+    {
+      "month": "2025-11",
+      "calls": 11088,
+      "trust_score": 77.31,
+      "resolution_gap": 0.3254,
+      "bandaid_rate": 0.151,
+      "trust_velocity": 0.043
+    },
+    {
+      "month": "2025-12",
+      "calls": 11153,
+      "trust_score": 76.81,
+      "resolution_gap": 0.3361,
+      "bandaid_rate": 0.1604,
+      "trust_velocity": -0.5
+    }
+  ],
+  "alerts": {
+    "timestamp": "2026-03-09 13:48:03",
+    "total_alerts": 5,
+    "veto_count": 3,
+    "watch_count": 2,
+    "thresholds_used": {
+      "trust_score_veto": 50.0,
+      "trust_score_watch": 65.0,
+      "resolution_gap_veto": 0.7,
+      "resolution_gap_watch": 0.5,
+      "bandaid_rate_veto": 0.5,
+      "bandaid_rate_watch": 0.2,
+      "rep_trust_veto": 60.0,
+      "rep_trust_watch": 65.0,
+      "rep_gap_veto": 0.55,
+      "rep_gap_watch": 0.45,
+      "drift_velocity_watch": 2.0
+    },
+    "alerts": [
+      {
+        "level": "VETO",
+        "entity_type": "scenario",
+        "entity": "loyalty_offer_missed",
+        "signal": "trust_score",
+        "value": 49.0947,
+        "threshold": 50.0,
+        "message": "Scenario 'loyalty_offer_missed' trust_score 49.1 below VETO threshold 50.0"
+      },
+      {
+        "level": "VETO",
+        "entity_type": "scenario",
+        "entity": "loyalty_offer_missed",
+        "signal": "resolution_gap",
+        "value": 0.7913,
+        "threshold": 0.7,
+        "message": "Scenario 'loyalty_offer_missed' resolution_gap 79.1% above VETO threshold 70%"
+      },
+      {
+        "level": "VETO",
+        "entity_type": "scenario",
+        "entity": "loyalty_offer_missed",
+        "signal": "bandaid_rate",
+        "value": 0.8803,
+        "threshold": 0.5,
+        "message": "Scenario 'loyalty_offer_missed' bandaid_rate 88.0% above VETO threshold 50%"
+      },
+      {
+        "level": "WATCH",
+        "entity_type": "scenario",
+        "entity": "gamed_metric",
+        "signal": "trust_score",
+        "value": 64.084,
+        "threshold": 65.0,
+        "message": "Scenario 'gamed_metric' trust_score 64.1 below WATCH threshold 65.0"
+      },
+      {
+        "level": "WATCH",
+        "entity_type": "scenario",
+        "entity": "gamed_metric",
+        "signal": "resolution_gap",
+        "value": 0.6997,
+        "threshold": 0.5,
+        "message": "Scenario 'gamed_metric' resolution_gap 70.0% above WATCH threshold 50%"
+      }
+    ]
+  },
+  "churn_integration": {
+    "trust_churn_correlation": -0.2815,
+    "interpretation": "Trust score shows weak/no relationship with churn at call level.",
+    "deciles": [
+      {
+        "decile": 1,
+        "trust_range": "21.1-44.9",
+        "calls": 13371,
+        "churn_rate": 0.2734,
+        "resolution_gap": 1.0
+      },
+      {
+        "decile": 2,
+        "trust_range": "44.9-54.7",
+        "calls": 13334,
+        "churn_rate": 0.2747,
+        "resolution_gap": 0.9952
+      },
+      {
+        "decile": 3,
+        "trust_range": "54.7-61.6",
+        "calls": 13361,
+        "churn_rate": 0.2676,
+        "resolution_gap": 0.9671
+      },
+      {
+        "decile": 4,
+        "trust_range": "61.6-70.7",
+        "calls": 13341,
+        "churn_rate": 0.2652,
+        "resolution_gap": 0.8621
+      },
+      {
+        "decile": 5,
+        "trust_range": "70.7-86.3",
+        "calls": 13356,
+        "churn_rate": 0.269,
+        "resolution_gap": -0.0528
+      },
+      {
+        "decile": 6,
+        "trust_range": "86.4-93.2",
+        "calls": 13365,
+        "churn_rate": 0.2721,
+        "resolution_gap": -0.0957
+      },
+      {
+        "decile": 7,
+        "trust_range": "93.2-96.0",
+        "calls": 13486,
+        "churn_rate": 0.2701,
+        "resolution_gap": -0.1149
+      },
+      {
+        "decile": 8,
+        "trust_range": "96.0-98.4",
+        "calls": 13381,
+        "churn_rate": 0.2714,
+        "resolution_gap": -0.0941
+      },
+      {
+        "decile": 9,
+        "trust_range": "98.4-98.7",
+        "calls": 13498,
+        "churn_rate": 0.2677,
+        "resolution_gap": -0.0925
+      },
+      {
+        "decile": 10,
+        "trust_range": "98.7-99.4",
+        "calls": 13024,
+        "churn_rate": 0.2692,
+        "resolution_gap": -0.0965
+      }
+    ]
+  },
+  "paper_governance_signals": {
+    "DAR": {
+      "full_name": "Delayed Adverse Rate",
+      "raw": 0.296467,
+      "normalized": 0.704192,
+      "formula": "F / D  where F=repeat contacts 31-60d among resolved, D=resolved calls",
+      "bounds": {
+        "L": 0.05,
+        "H": 0.4
+      }
+    },
+    "DRL": {
+      "full_name": "Downstream Remediation Load",
+      "raw": 0.000346,
+      "normalized": 0.0,
+      "formula": "JS(p \u2225 q)  Jensen-Shannon divergence, current vs baseline scenario mix",
+      "bounds": {
+        "L": 0.02,
+        "H": 0.3
+      },
+      "n_months_available": 12,
+      "requires_multi_month": true,
+      "note": null
+    },
+    "DOV": {
+      "full_name": "Durable Outcome Validation",
+      "normalized": 0.023907,
+      "formula": "clamp((A_base - A_cur) / (A_base + \u03b5), 0, 1)",
+      "DOV_gate_tau": 0.5,
+      "DOV_gate_triggered": false
+    },
+    "POR": {
+      "full_name": "Proxy Overfit Ratio",
+      "raw": 0.0,
+      "normalized": 0.0,
+      "formula": "clamp(\u0394P/(\u0394T+\u03b5), 0, K) then clamp((raw-1)/(K-1), 0, 1)",
+      "K": 5.0,
+      "n_months_available": 12,
+      "requires_multi_month": true,
+      "note": null
+    },
+    "TER": {
+      "full_name": "Terminal Exit Rate",
+      "value": 0.270424,
+      "baseline_churn": 0.270041,
+      "delta_vs_baseline": 0.000383,
+      "formula": "churn rate among proxy-resolved calls",
+      "note": "Diagnostic only \u2014 not a SII component. TER \u2248 baseline churn = proxy carries no retention signal."
+    },
+    "SII": {
+      "full_name": "System Integrity Index",
+      "raw": 21.7234,
+      "gated": 21.7234,
+      "status": "OK",
+      "DOV_gate_applied": false,
+      "formula": "100 * (0.30*DAR + 0.20*DRL + 0.25*DOV + 0.25*POR); DOV>=\u03c4 \u2192 100",
+      "weights": {
+        "DAR": 0.3,
+        "DRL": 0.2,
+        "DOV": 0.25,
+        "POR": 0.25
+      },
+      "thresholds": {
+        "veto": 60.0,
+        "watch": 30.0
+      }
+    },
+    "summary": {
+      "SII_gated": 21.7234,
+      "status": "OK",
+      "component_scores": {
+        "DAR": 0.704192,
+        "DRL": 0.0,
+        "DOV": 0.023907,
+        "POR": 0.0
+      },
+      "TER": 0.270424,
+      "baseline_churn": 0.270041
+    }
+  }
+}

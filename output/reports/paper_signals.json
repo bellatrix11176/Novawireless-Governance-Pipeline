@@ -1,0 +1,80 @@
+{
+  "DAR": {
+    "full_name": "Delayed Adverse Rate",
+    "raw": 0.296467,
+    "normalized": 0.704192,
+    "formula": "F / D  where F=repeat contacts 31-60d among resolved, D=resolved calls",
+    "bounds": {
+      "L": 0.05,
+      "H": 0.4
+    }
+  },
+  "DRL": {
+    "full_name": "Downstream Remediation Load",
+    "raw": 0.000346,
+    "normalized": 0.0,
+    "formula": "JS(p \u2225 q)  Jensen-Shannon divergence, current vs baseline scenario mix",
+    "bounds": {
+      "L": 0.02,
+      "H": 0.3
+    },
+    "n_months_available": 12,
+    "requires_multi_month": true,
+    "note": null
+  },
+  "DOV": {
+    "full_name": "Durable Outcome Validation",
+    "normalized": 0.023907,
+    "formula": "clamp((A_base - A_cur) / (A_base + \u03b5), 0, 1)",
+    "DOV_gate_tau": 0.5,
+    "DOV_gate_triggered": false
+  },
+  "POR": {
+    "full_name": "Proxy Overfit Ratio",
+    "raw": 0.0,
+    "normalized": 0.0,
+    "formula": "clamp(\u0394P/(\u0394T+\u03b5), 0, K) then clamp((raw-1)/(K-1), 0, 1)",
+    "K": 5.0,
+    "n_months_available": 12,
+    "requires_multi_month": true,
+    "note": null
+  },
+  "TER": {
+    "full_name": "Terminal Exit Rate",
+    "value": 0.270424,
+    "baseline_churn": 0.270041,
+    "delta_vs_baseline": 0.000383,
+    "formula": "churn rate among proxy-resolved calls",
+    "note": "Diagnostic only \u2014 not a SII component. TER \u2248 baseline churn = proxy carries no retention signal."
+  },
+  "SII": {
+    "full_name": "System Integrity Index",
+    "raw": 21.7234,
+    "gated": 21.7234,
+    "status": "OK",
+    "DOV_gate_applied": false,
+    "formula": "100 * (0.30*DAR + 0.20*DRL + 0.25*DOV + 0.25*POR); DOV>=\u03c4 \u2192 100",
+    "weights": {
+      "DAR": 0.3,
+      "DRL": 0.2,
+      "DOV": 0.25,
+      "POR": 0.25
+    },
+    "thresholds": {
+      "veto": 60.0,
+      "watch": 30.0
+    }
+  },
+  "summary": {
+    "SII_gated": 21.7234,
+    "status": "OK",
+    "component_scores": {
+      "DAR": 0.704192,
+      "DRL": 0.0,
+      "DOV": 0.023907,
+      "POR": 0.0
+    },
+    "TER": 0.270424,
+    "baseline_churn": 0.270041
+  }
+}

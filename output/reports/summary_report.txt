@@ -1,0 +1,127 @@
+TRUST SIGNAL HEALTH PIPELINE — SUMMARY REPORT (v2)
+============================================================
+Generated: 2026-03-09 13:48:07
+Rows analyzed: 133,517
+Months loaded: 12
+
+INTEGRITY GATE
+  Total rows:       133,517
+  Clean rows:       133,517
+  Quarantined:      0 (0.0%)
+  Proxy-true divergence rate: 38.3% (soft signal, not quarantined)
+
+OVERALL SIGNAL RATES
+  Proxy resolution rate:      84.1%
+  True resolution rate:       51.3%
+  Resolution inflation:       32.8% ← this is the Goodhart gap
+  Repeat contact (30d) rate:  16.1%
+  Escalation rate:            12.8%
+  Credit applied rate:        42.0%
+  Bandaid credit rate:        15.4% ← unauthorized suppression signal
+
+TRUST SCORE SUMMARY
+  Mean:   77.2
+  Median: 86.3
+  Std:    21.5
+  P10:    44.9
+  P90:    98.7
+
+SCENARIO HEALTH (sorted by trust score, lowest first)
+  Scenario                       Calls   Trust     Gap  Bandaid
+  ------------------------------------------------------------
+  loyalty_offer_missed          23,350    49.1   79.1%    88.0%
+  gamed_metric                  28,678    64.1   70.0%     0.0%
+  activation_failed              6,939    73.1   37.0%     0.0%
+  unresolvable_clean            15,590    73.3   43.7%     0.0%
+  line_add_legitimate            6,561    95.2   -1.5%     0.0%
+  clean                         45,122    96.4   -8.6%     0.0%
+  activation_clean               7,277    96.6   -2.2%     0.0%
+
+MONTHLY TREND SUMMARY
+  Month          Calls   Trust     Gap  Bandaid   Velocity
+  ------------------------------------------------------------
+  2025-01       11,156    77.2   33.2%    15.1%          —
+  2025-02       11,163    77.5   32.0%    15.3%      +0.27
+  2025-03       11,147    77.2   33.0%    15.3%      -0.27
+  2025-04       11,127    77.1   32.7%    15.7%      -0.12
+  2025-05       11,165    77.1   32.8%    15.5%      +0.04
+  2025-06       11,164    77.3   32.7%    15.6%      +0.13
+  2025-07       11,051    77.4   32.5%    14.9%      +0.16
+  2025-08       11,084    77.2   32.8%    15.7%      -0.18
+  2025-09       11,089    77.3   32.9%    14.8%      +0.07
+  2025-10       11,130    77.3   32.5%    15.7%      -0.05
+  2025-11       11,088    77.3   32.5%    15.1%      +0.04
+  2025-12       11,153    76.8   33.6%    16.0%      -0.50
+
+REP RANKINGS (>= 20 calls)
+  Total reps: 250  |  Qualified: 250
+
+  LOWEST TRUST (most concerning):
+    REP00081 | calls=534 | trust=73.6 | gap=39.9% | credit_risk=0.22
+    REP00207 | calls=559 | trust=74.9 | gap=37.9% | credit_risk=0.21
+    REP00046 | calls=513 | trust=75.1 | gap=38.0% | credit_risk=0.21
+    REP00171 | calls=519 | trust=75.2 | gap=33.7% | credit_risk=0.22
+    REP00175 | calls=530 | trust=75.3 | gap=36.4% | credit_risk=0.21
+
+  HIGHEST TRUST (healthiest):
+    REP00100 | calls=524 | trust=79.9 | gap=29.0% | credit_risk=0.18
+    REP00007 | calls=564 | trust=79.7 | gap=28.0% | credit_risk=0.18
+    REP00063 | calls=538 | trust=79.7 | gap=27.5% | credit_risk=0.17
+    REP00151 | calls=558 | trust=79.6 | gap=28.8% | credit_risk=0.18
+    REP00170 | calls=554 | trust=79.3 | gap=28.0% | credit_risk=0.18
+
+CHURN INTEGRATION — Trust Score Predictive Power
+  Trust-Churn Correlation: r = -0.2815
+  ► Weak negative relationship. Trust has marginal predictive value.
+
+  Decile   Trust Range      Calls   Churn     Gap
+  --------------------------------------------------
+  D1       21-45          13,371   27.3%  100.0%
+  D2       45-55          13,334   27.5%   99.5%
+  D3       55-62          13,361   26.8%   96.7%
+  D4       62-71          13,341   26.5%   86.2%
+  D5       71-86          13,356   26.9%   -5.3%
+  D6       86-93          13,365   27.2%   -9.6%
+  D7       93-96          13,486   27.0%  -11.5%
+  D8       96-98          13,381   27.1%   -9.4%
+  D9       98-99          13,498   26.8%   -9.2%
+  D10      99-99          13,024   26.9%   -9.7%
+
+
+PAPER GOVERNANCE SIGNALS (Aulabaugh 2026)
+============================================================
+  SII (System Integrity Index): 21.7 / 100   ✓  OK    — Measurement environment within governance bounds.
+
+  Signal Breakdown (higher = worse; SII weights in parens):
+    DAR — Delayed Adverse Rate        (w=0.30): 0.7042  [raw=0.2965]
+    DRL — Downstream Remediation Load (w=0.20): 0.0000  [raw=0.0003]
+    DOV — Durable Outcome Validation  (w=0.25): 0.0239
+    POR — Proxy Overfit Ratio         (w=0.25): 0.0000  [raw=0.0000]
+
+  TER — Terminal Exit Rate (diagnostic, not in SII):
+    Proxy-resolved churn: 0.2704  |  Baseline churn: 0.270041  (Δ vs baseline: +0.0004)
+    → TER ≈ baseline: proxy resolution flag carries NO retention signal.
+
+  Normalization bounds:
+    DAR: L=0.05, H=0.4
+    DRL: L=0.02, H=0.3
+    POR: K=5.0  (POR_raw saturates at proxy improving 5.0× faster than true)
+    DOV gate τ=0.5  |  SII VETO≥60.0  WATCH≥30.0
+
+THRESHOLD ALERTS
+  Total: 5  (VETO: 3, WATCH: 2)
+  ⚠ VETO conditions present — see threshold_alerts.txt for details
+
+INTERPRETATION GUIDE
+  - Resolution inflation = proxy - true rate. Positive = system looks better than it is.
+  - Bandaid credits are unauthorized credits to suppress repeat contacts.
+  - Credit burden ratio = credit_amount / monthly_charges. High ratio = substantive
+    appeasement (e.g. $25 credit on a $27/month plan) vs a token courtesy gesture.
+  - Detection signal density = fraction of fraud/gaming/scripted-language indicators firing.
+  - Rep drift score = aware_gaming (0.45) + gaming_propensity (0.35) + burnout (0.20).
+  - Rep DAR = rep-level F/D (paper formula). Identifies which reps drive 31-60d callbacks.
+  - Scripted window flag = scripted FCR-gaming language detected in transcript.
+  - Scenario DOV = proxy label error rate per call type (1 - accuracy). Higher = worse.
+  - Call trust score (0-100): 100 = fully trustworthy, 0 = total divergence.
+  - Drift velocity = month-over-month trust score change. Negative = degrading.
+  - VETO = halt AI optimization; re-audit labels. WATCH = human review required.

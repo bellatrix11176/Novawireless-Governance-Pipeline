@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-03-09 13:48:03",
+  "total_alerts": 5,
+  "veto_count": 3,
+  "watch_count": 2,
+  "thresholds_used": {
+    "trust_score_veto": 50.0,
+    "trust_score_watch": 65.0,
+    "resolution_gap_veto": 0.7,
+    "resolution_gap_watch": 0.5,
+    "bandaid_rate_veto": 0.5,
+    "bandaid_rate_watch": 0.2,
+    "rep_trust_veto": 60.0,
+    "rep_trust_watch": 65.0,
+    "rep_gap_veto": 0.55,
+    "rep_gap_watch": 0.45,
+    "drift_velocity_watch": 2.0
+  },
+  "alerts": [
+    {
+      "level": "VETO",
+      "entity_type": "scenario",
+      "entity": "loyalty_offer_missed",
+      "signal": "trust_score",
+      "value": 49.0947,
+      "threshold": 50.0,
+      "message": "Scenario 'loyalty_offer_missed' trust_score 49.1 below VETO threshold 50.0"
+    },
+    {
+      "level": "VETO",
+      "entity_type": "scenario",
+      "entity": "loyalty_offer_missed",
+      "signal": "resolution_gap",
+      "value": 0.7913,
+      "threshold": 0.7,
+      "message": "Scenario 'loyalty_offer_missed' resolution_gap 79.1% above VETO threshold 70%"
+    },
+    {
+      "level": "VETO",
+      "entity_type": "scenario",
+      "entity": "loyalty_offer_missed",
+      "signal": "bandaid_rate",
+      "value": 0.8803,
+      "threshold": 0.5,
+      "message": "Scenario 'loyalty_offer_missed' bandaid_rate 88.0% above VETO threshold 50%"
+    },
+    {
+      "level": "WATCH",
+      "entity_type": "scenario",
+      "entity": "gamed_metric",
+      "signal": "trust_score",
+      "value": 64.084,
+      "threshold": 65.0,
+      "message": "Scenario 'gamed_metric' trust_score 64.1 below WATCH threshold 65.0"
+    },
+    {
+      "level": "WATCH",
+      "entity_type": "scenario",
+      "entity": "gamed_metric",
+      "signal": "resolution_gap",
+      "value": 0.6997,
+      "threshold": 0.5,
+      "message": "Scenario 'gamed_metric' resolution_gap 70.0% above WATCH threshold 50%"
+    }
+  ]
+}

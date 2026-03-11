@@ -1,0 +1,23 @@
+GOVERNANCE THRESHOLD ALERTS
+============================================================
+Generated: 2026-03-09 13:48:03
+Total alerts: 5
+  VETO:  3
+  WATCH: 2
+
+─── VETO ALERTS (optimization halted) ───
+  [SCENARIO] Scenario 'loyalty_offer_missed' trust_score 49.1 below VETO threshold 50.0
+  [SCENARIO] Scenario 'loyalty_offer_missed' resolution_gap 79.1% above VETO threshold 70%
+  [SCENARIO] Scenario 'loyalty_offer_missed' bandaid_rate 88.0% above VETO threshold 50%
+
+─── WATCH ALERTS (human review required) ───
+  [SCENARIO] Scenario 'gamed_metric' trust_score 64.1 below WATCH threshold 65.0
+  [SCENARIO] Scenario 'gamed_metric' resolution_gap 70.0% above WATCH threshold 50%
+
+THRESHOLD CONFIGURATION
+  Scenario trust VETO/WATCH:  < 50.0 / < 65.0
+  Scenario gap VETO/WATCH:    > 70% / > 50%
+  Bandaid rate VETO/WATCH:    > 50% / > 20%
+  Rep trust VETO/WATCH:       < 60.0 / < 65.0
+  Rep gap VETO/WATCH:         > 55% / > 45%
+  Drift velocity WATCH:       > 2.0 pts/month
