@@ -2,6 +2,13 @@
 
 **Reference implementation of governance signals from:**
 
+---
+
+⚠️ Resource Notice
+This pipeline is designed to be run iteratively on small datasets. Do not run against large datasets in a single pass. Process one month at a time to avoid memory and CPU overload. Adjust chunk sizes based on your available system resources.
+
+---
+
 > Aulabaugh, G. (2026). *When KPIs Lie: Governance Signals for AI-Optimized Call Centers.* PixelKraze, LLC.
 
 This repository contains the base pipeline implementing the five governance signals and System Integrity Index (SII) defined in Aulabaugh (2026). It is the canonical reference for reproducing the paper's results against the NovaWireless synthetic dataset.
